@@ -83,4 +83,10 @@ The following features were implemented to go beyond the core requirements and s
 
    - *Price Precision:* The calculated AveragePrice is rounded to two decimal places upon storage (Math.Round(..., 2)), maintaining high precision while adhering to common financial reporting standards.
 
+   <img width="1450" height="488" alt="image" src="https://github.com/user-attachments/assets/52fff505-8fdd-4355-936b-dabbba1964a3" />
+   <img width="1492" height="911" alt="image" src="https://github.com/user-attachments/assets/cba97318-14a6-4a35-b43c-93ff3ab8c1ba" />
+   <img width="1336" height="682" alt="image" src="https://github.com/user-attachments/assets/56c34570-f38e-4b9d-b31d-014f18a83525" />
+   <img width="1326" height="886" alt="image" src="https://github.com/user-attachments/assets/359bc434-6d4f-4f0b-aa3f-ac27c68241cf" />
+
    
+
