@@ -44,7 +44,15 @@ The application is fully containerized, making execution portable and consistent
    The API is exposed on your machine's port 8080.
    - Swagger UI (Documentation): http://localhost:8080/docs
    - Base API URL: http://localhost:8080/api/energy
+  
+## NOTE: To enable the application to connect to the external data API, you must **have** the credentials(username, password) and you need to add the following configuration block to your appsettings.json file:
 
+```
+"StellarBlueApiSettings": { 
+  "Username": "{username}",
+  "Password": "{password}" 
+}
+```
 ### Data Persistence
 A Docker Volume is configured in docker-compose.yml to persist the energy_data.db file. This ensures that all stored data is retained even if the Docker container is stopped, restarted, or removed.
 
@@ -52,6 +60,27 @@ A Docker Volume is configured in docker-compose.yml to persist the energy_data.d
 The API exposes the following endpoints, documented and testable via the Swagger UI:
 
 | Method | Route | Description |
-| :--- | :---: | ---: |
+| :--- | :---: | :---: |
 | POST | /api/energy/ImportData/{dateFrom}/{dateTo} | Retrieves raw MCP data from the external API for the specified date range, calculates the daily average price, and stores/updates the results in the database. |
 | GET | /api/energy/GetData/{dateFrom}/{dateTo} | Returns the stored daily average energy prices (AveragePrice) from the database for the requested range. |
+
+## Advanced Features & Design Choices
+
+The following features were implemented to go beyond the core requirements and showcase a "forward-thinking mindset":
+
+1. **Automatic Scheduling (Advanced Task B)**
+   - *Implementation:* A custom IHostedService (DataUpdateBackgroundService.cs) runs continuously in the background.
+
+   - *Functionality:* This service automatically calls the data retrieval and processing logic to update the database for the last 7 days once every 24 hours. This ensures data freshness without requiring manual client calls.
+
+2. **Robust Dockerization (Advanced Task A)**
+   - *Implementation:* Optimized Dockerfile and docker-compose.yml are provided.
+
+   - *Benefit:* Enables easy, single-command deployment and guarantees a consistent runtime environment, addressing scalability and deployment challenges.
+
+3. **Data Integrity & Precision**
+   - *Date Range Fix:* The data retrieval logic handles the dateTo parameter by requesting data up to the next day (dateTo.AddDays(1)), ensuring that the full day's data for the end date is included in the average calculation.
+
+   - *Price Precision:* The calculated AveragePrice is rounded to two decimal places upon storage (Math.Round(..., 2)), maintaining high precision while adhering to common financial reporting standards.
+
+   
