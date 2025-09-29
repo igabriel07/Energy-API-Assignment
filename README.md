@@ -45,7 +45,7 @@ The application is fully containerized, making execution portable and consistent
    - Swagger UI (Documentation): http://localhost:8080/docs
    - Base API URL: http://localhost:8080/api/energy
   
-## NOTE: To enable the application to connect to the external data API, you must **have** the credentials(username, password) and you need to add the following configuration block to your appsettings.json file:
+### NOTE: To enable the application to connect to the external data API, you must **have** the credentials(username, password) and you need to add the following configuration block to your appsettings.json file:
 
 ```
 "StellarBlueApiSettings": { 
