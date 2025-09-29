@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StellarBlueAssignment</name>
+    </assembly>
+    <members>
+        <member name="M:StellarBlueAssignment.Controllers.EnergyController.ImportData(System.DateTime,System.DateTime)">
+            <summary>
+            Retrieves MCP data for the specified date range, calculates daily averages, 
+            and stores the results in the database (upsert).
+            Example: POST /api/energy/ImportData/2025-09-01/2025-09-28
+            </summary>
+        </member>
+        <member name="M:StellarBlueAssignment.Controllers.EnergyController.GetData(System.DateTime,System.DateTime)">
+            <summary>
+            Returns the stored daily average energy prices within the range [from,to].
+            Example: GET /api/energy/GetData/2025-09-01/2025-09-28
+            </summary>
+        </member>
+        <member name="T:StellarBlueAssignment.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:StellarBlueAssignment.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:StellarBlueAssignment.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:StellarBlueAssignment.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

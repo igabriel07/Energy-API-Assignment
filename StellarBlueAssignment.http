@@ -1,0 +1,6 @@
+@StellarBlueAssignment_HostAddress = http://localhost:5073
+
+GET {{StellarBlueAssignment_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

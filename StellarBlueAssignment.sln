@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StellarBlueAssignment", "StellarBlueAssignment.csproj", "{101F9021-5FBC-CB58-6D5C-A4A3234DCB55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{101F9021-5FBC-CB58-6D5C-A4A3234DCB55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{101F9021-5FBC-CB58-6D5C-A4A3234DCB55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{101F9021-5FBC-CB58-6D5C-A4A3234DCB55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{101F9021-5FBC-CB58-6D5C-A4A3234DCB55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF321D5D-7D2E-426D-A134-F82A165EA49B}
+	EndGlobalSection
+EndGlobal
